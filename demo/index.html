@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery.PhoneReplace Тестовая страница</title>
+        <style type="text/css">
+            body {
+                padding: 20px 30px;
+            }
+            code {
+                display: inline-block;
+                padding: 0 30px 20px;
+                background: #ddd;
+            }
+            #replaceme {
+                font-size: 40px;
+            }
+        </style>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="../jquery.phonereplace.js"></script>
+        <script type="text/javascript">
+            (function($) {
+                $(function() {
+                    $('#replaceme').phonereplace({
+                        'utm_campaigns': 'y_celevie_msk_poisk',
+                        'replace': '+7 495 589-66-18'
+                    });
+                    $('#replaceme').phonereplace({
+                        'utm_campaigns': 'y_geo_msk_poisk',
+                        'replace': '+7 495 228-54-37'
+                    });
+                    $('#replaceme').phonereplace({
+                        'utm_campaigns': 'y_deti_msk_poisk',
+                        'replace': '+7 495 444-62-08'
+                    });
+                })
+            })(jQuery)
+        </script>
+	</head>
+	<body>
+            <pre>
+<code>
+(function($) {
+    $(function() {
+        // Test 1
+        $('#replaceme').phonereplace({
+            'utm_campaigns': 'y_celevie_msk_poisk',
+            'replace': '+7 495 589-66-18'
+        });
+
+        // Test 2
+        $('#replaceme').phonereplace({
+            'utm_campaigns': 'y_geo_msk_poisk',
+            'replace': '+7 495 228-54-37'
+        });
+
+        // Test 3
+        $('#replaceme').phonereplace({
+            'utm_campaigns': 'y_deti_msk_poisk',
+            'replace': '+7 495 444-62-08'
+        });
+    })
+})(jQuery)
+</code>
+            </pre>
+
+            <p><a href="?utm_campaign=y_celevie_msk_poisk">Тест 1</a></p>
+            <p><a href="?utm_campaign=y_geo_msk_poisk">Тест 2</a></p>
+            <p><a href="?utm_campaign=y_deti_msk_poisk">Тест 3</a></p>
+
+            <h2>Результат:</h2>
+            <div id="replaceme">+1 234 567-89-01</div>
+	</body>
+</html>
